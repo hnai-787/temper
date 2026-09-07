@@ -1,0 +1,55 @@
+name: Hash Cracking with John the Ripper
+slug: hash-cracking-john-the-ripper
+
+category: cybersecurity
+subcategory: "Introduction to Cyber Security coursework"
+
+status: completed
+
+visibility: public
+
+description:
+  short: "A lab demonstration of password hash cracking with John the Ripper and Johnny, using dummy hashes and a CUPP-generated wordlist."
+  long: |
+    A presentation-based lab demonstration walking through generating a
+    dummy MD5 password hash, building a custom wordlist with CUPP, and
+    cracking the dummy hash with both John the Ripper (CLI) and Johnny
+    (GUI). Also covers cracking password-protected ZIP/PDF files
+    (zip2john/pdf2john) and mitigations (salting, adaptive hashing like
+    bcrypt/scrypt/Argon2, MFA, rate limiting). Built for an Introduction to
+    Cyber Security course (Air University, Semester 1, Fall 2023), scoped
+    explicitly to dummy hashes in a controlled lab.
+
+technologies: ["Kali Linux", "John the Ripper", "Johnny", "CUPP"]
+tags: ["cybersecurity", "password-cracking", "hashing", "kali-linux"]
+
+repository:
+  provider: github
+  visibility: public
+  sync: true
+
+portfolio:
+  enabled: true
+  featured: false
+
+documentation:
+  readme: true
+  case_study: false
+
+dates:
+  started: null
+  completed: null
+
+links:
+  github: null
+  demo: null
+  documentation: null
+
+assets:
+  hero: null
+  screenshots:
+    - screenshots
+
+achievements: []
+
+metrics: []
