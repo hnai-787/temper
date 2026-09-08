@@ -1,4 +1,4 @@
-# Hash Cracking with John the Ripper + pwaudit
+# pwaudit — Password Policy Audit Toolkit + Hash Cracking Lab
 
 ## Course Information
 
