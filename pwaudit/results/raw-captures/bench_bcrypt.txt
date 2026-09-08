@@ -1,0 +1,4 @@
+Will run 8 OpenMP threads
+Benchmarking: bcrypt ("$2a$05", 32 iterations) [Blowfish 32/64 X3]... DONE
+Raw:	3147 c/s real, 407 c/s virtual
+

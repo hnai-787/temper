@@ -1,0 +1,3 @@
+Loaded 1 password hash (md5crypt [MD5 32/64 X2])
+Will run 8 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status

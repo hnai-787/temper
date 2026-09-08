@@ -1,0 +1,26 @@
+[project]
+name = "pwaudit"
+version = "1.0.0"
+description = "Password policy audit (NIST SP 800-63B-4), breach-exposure check, guessability estimation, and John the Ripper experiment reporting"
+requires-python = ">=3.11"
+dependencies = [
+    "zxcvbn>=4.4,<5",
+    "requests>=2.31,<3",
+    "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+pwaudit = "pwaudit.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,15 @@
+version: 1
+standard:
+  nist: SP-800-63B-4
+dataset_file: ../dataset/synthetic-passwords.yaml
+selection_policy:
+  auth_context: single_factor
+blocklist_file: ../data/common-password-blocklist.txt
+context:
+  service_name: "Avionics University Portal"
+  usernames: ["alice", "demo1", "demo2"]
+compromise_check:
+  mode: offline
+  corpus_file: ../data/hibp-snapshot-2026-09-08.txt
+  snapshot_date: "2026-09-08"
+attack_manifest_file: attack-manifest.yaml

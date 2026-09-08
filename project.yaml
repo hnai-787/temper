@@ -9,7 +9,7 @@ status: completed
 visibility: public
 
 description:
-  short: "A lab demonstration of password hash cracking with John the Ripper and Johnny, using dummy hashes and a CUPP-generated wordlist."
+  short: "A lab demonstration of hash cracking with John the Ripper/Johnny, plus pwaudit: a NIST SP 800-63B-4 password-policy auditor grounded in real HIBP breach data and real John the Ripper experiments."
   long: |
     A presentation-based lab demonstration walking through generating a
     dummy MD5 password hash, building a custom wordlist with CUPP, and
@@ -19,9 +19,16 @@ description:
     bcrypt/scrypt/Argon2, MFA, rate limiting). Built for an Introduction to
     Cyber Security course (Air University, Semester 1, Fall 2023), scoped
     explicitly to dummy hashes in a controlled lab.
+    Added pwaudit: a password-security laboratory that audits verifier
+    policy against the current NIST SP 800-63B-4 (July 2025), checks a
+    frozen synthetic password dataset against real Have I Been Pwned
+    breach data (live API, not invented), estimates pattern-aware
+    guessability with zxcvbn, and measures real John the Ripper crack
+    outcomes and hash-format throughput -- reporting all four dimensions
+    separately rather than as one combined score.
 
-technologies: ["Kali Linux", "John the Ripper", "Johnny", "CUPP"]
-tags: ["cybersecurity", "password-cracking", "hashing", "kali-linux"]
+technologies: ["Kali Linux", "John the Ripper", "Johnny", "CUPP", "Python", "zxcvbn", "Have I Been Pwned API", "pytest", "Ruff", "GitHub Actions"]
+tags: ["cybersecurity", "password-cracking", "hashing", "kali-linux", "nist-800-63b", "password-policy", "breach-data"]
 
 repository:
   provider: github
@@ -30,7 +37,7 @@ repository:
 
 portfolio:
   enabled: true
-  featured: false
+  featured: true
 
 documentation:
   readme: true
@@ -52,4 +59,16 @@ assets:
 
 achievements: []
 
-metrics: []
+metrics:
+  - label: "pwaudit: automated tests passing"
+    value: "46/46 (+1 real John integration test)"
+    verified: true
+  - label: "pwaudit: Ruff lint issues"
+    value: "0"
+    verified: true
+  - label: "pwaudit: legacy-composition passwords that are real confirmed HIBP breach hits"
+    value: "5/5 (100%)"
+    verified: true
+  - label: "pwaudit: real John the Ripper hash-format throughput (md5crypt vs. bcrypt, real c/s)"
+    value: "49,462 c/s vs. 3,147 c/s (~15.7x)"
+    verified: true

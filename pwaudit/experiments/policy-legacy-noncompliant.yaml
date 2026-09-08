@@ -1,0 +1,18 @@
+# Models the kind of policy the ORIGINAL lab's era (2010s-style "8
+# characters, mixed case, digit, symbol, rotate every 90 days") would
+# have configured -- a real, still-common pattern this project can now
+# show is nonconformant with the current standard, not just outdated by
+# assertion.
+auth_context: single_factor
+minimum_length: 8
+maximum_length_supported: 20
+composition_rules: true
+periodic_rotation: true
+truncates_password: false
+password_manager_autofill: false
+paste_allowed: false
+blocklist:
+  enabled: false
+rate_limit:
+  enabled: true
+  max_consecutive_failures: 500

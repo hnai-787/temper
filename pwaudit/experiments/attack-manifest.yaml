@@ -1,0 +1,45 @@
+# Reproducible experiment manifest tying specific dataset passwords to
+# their REAL captured John the Ripper output (results/raw-captures/).
+# These are actual `john` 1.9.0 runs performed in WSL Ubuntu during this
+# project's build -- see PROJECT_NOTES.md "Verification performed" for
+# the exact commands and environment. Nothing here is synthesized output.
+version: 1
+environment:
+  john_version: "1.9.0 (Ubuntu 1.9.0-3build1, core/non-jumbo build)"
+  os: "WSL2 Ubuntu (resolute)"
+  cpu_threads: 8
+  note: >
+    Core (non-jumbo) John does not include Raw-MD5/NTLM formats; no
+    passwordless sudo was available to install build dependencies for a
+    jumbo build from source, so this experiment uses md5crypt (a real,
+    salted, iterated legacy format) and bcrypt as the fast/legacy vs.
+    slow/modern comparison instead of raw MD5 vs. bcrypt. See
+    PROJECT_NOTES.md for the full investigation.
+
+benchmarks:
+  - format: md5crypt
+    capture_file: ../results/raw-captures/bench_md5crypt.txt
+  - format: bcrypt
+    capture_file: ../results/raw-captures/bench_bcrypt.txt
+
+attacks:
+  - password_id: B02
+    format: md5crypt
+    mode: wordlist
+    description: "5-word custom wordlist containing the real password -- expected crack"
+    duration_limit_seconds: 1
+    capture_file: ../results/raw-captures/attack_weak_clean.txt
+
+  - password_id: B02
+    format: md5crypt
+    mode: wordlist+rules
+    description: "John's bundled password.lst (3559 words) + mangling rules -- NOT in this list, real non-crack"
+    duration_limit_seconds: 2
+    capture_file: ../results/raw-captures/attack_weak_rules_clean.txt
+
+  - password_id: E06
+    format: md5crypt
+    mode: incremental
+    description: "Alnum incremental (brute-force) mode, bounded to 15s -- expected right-censored, not cracked"
+    duration_limit_seconds: 15
+    capture_file: ../results/raw-captures/attack_strong_incremental_clean.txt

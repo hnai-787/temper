@@ -1,0 +1,13 @@
+auth_context: single_factor
+minimum_length: 15
+maximum_length_supported: 128
+composition_rules: false
+periodic_rotation: false
+truncates_password: false
+password_manager_autofill: true
+paste_allowed: true
+blocklist:
+  enabled: true
+rate_limit:
+  enabled: true
+  max_consecutive_failures: 10

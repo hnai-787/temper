@@ -1,0 +1,4 @@
+Will run 8 OpenMP threads
+Benchmarking: md5crypt [MD5 32/64 X2]... DONE
+Raw:	49462 c/s real, 6704 c/s virtual
+
