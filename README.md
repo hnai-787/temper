@@ -5,18 +5,9 @@
 *Ships as the `pwaudit` CLI/library — see below.*
 
 
-## Course Information
-
-| Field | Details |
-|---|---|
-| Course | Introduction to Cyber Security |
-| Semester | Semester 1 — Fall 2023 |
-| University | Air University, Islamabad |
-| Student | Hussain Ali (232095) |
-
 ## Overview
 
-The original coursework is a lab demonstration/presentation covering
+The original version is a lab demonstration/presentation covering
 password hash cracking against a **dummy MD5 hash** using John the
 Ripper and Johnny, plus a custom wordlist built with CUPP and a note on
 cracking password-protected ZIP/PDF archives.
@@ -221,6 +212,6 @@ right-censored bounded brute-force attempt. See `pwaudit/README.md`
 
 ## Ethical Notice
 
-This project is strictly an academic lab demonstration using dummy hashes
-in a controlled environment. It must not be used against real accounts,
+This project is strictly a lab demonstration using dummy hashes in a
+controlled environment. It must not be used against real accounts,
 systems, or credentials without explicit authorization.

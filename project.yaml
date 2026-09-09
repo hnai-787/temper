@@ -2,7 +2,7 @@ name: Temper
 slug: temper
 
 category: cybersecurity
-subcategory: "Introduction to Cyber Security coursework"
+subcategory: "Introduction to Cyber Security"
 
 status: completed
 
@@ -16,9 +16,8 @@ description:
     cracking the dummy hash with both John the Ripper (CLI) and Johnny
     (GUI). Also covers cracking password-protected ZIP/PDF files
     (zip2john/pdf2john) and mitigations (salting, adaptive hashing like
-    bcrypt/scrypt/Argon2, MFA, rate limiting). Built for an Introduction to
-    Cyber Security course (Air University, Semester 1, Fall 2023), scoped
-    explicitly to dummy hashes in a controlled lab.
+    bcrypt/scrypt/Argon2, MFA, rate limiting), scoped explicitly to dummy
+    hashes in a controlled lab.
     Added pwaudit: a password-security laboratory that audits verifier
     policy against the current NIST SP 800-63B-4 (July 2025), checks a
     frozen synthetic password dataset against real Have I Been Pwned
