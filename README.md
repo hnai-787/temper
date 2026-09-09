@@ -1,6 +1,8 @@
-# pwaudit — Password Policy Audit Toolkit + Hash Cracking Lab
+# Temper — Password Policy Audit Toolkit
 
-![pwaudit banner](assets/brand/pwaudit-readme-banner.png)
+![temper banner](assets/brand/temper-readme-banner.png)
+
+*Ships as the `pwaudit` CLI/library — see below.*
 
 
 ## Course Information
@@ -102,7 +104,7 @@ password-policy folklore.)*
 
 ## How It Works
 
-![How pwaudit works](assets/brand/pwaudit-how-it-works.png)
+![How temper works](assets/brand/temper-how-it-works.png)
 
 ## Repository Structure
 

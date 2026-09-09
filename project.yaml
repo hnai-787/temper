@@ -1,5 +1,5 @@
-name: PWAudit
-slug: pwaudit
+name: Temper
+slug: temper
 
 category: cybersecurity
 subcategory: "Introduction to Cyber Security coursework"
@@ -48,12 +48,12 @@ dates:
   completed: null
 
 links:
-  github: https://github.com/Hussain-Ali-787/pwaudit
+  github: https://github.com/Hussain-Ali-787/temper
   demo: null
   documentation: null
 
 assets:
-  hero: assets/brand/pwaudit-readme-banner.png
+  hero: assets/brand/temper-readme-banner.png
   screenshots:
     - screenshots
 
