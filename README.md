@@ -1,5 +1,8 @@
 # pwaudit — Password Policy Audit Toolkit + Hash Cracking Lab
 
+![pwaudit banner](assets/brand/pwaudit-readme-banner.png)
+
+
 ## Course Information
 
 | Field | Details |
@@ -96,6 +99,10 @@ password-policy folklore.)*
    HIBP breach data, zxcvbn, and real bounded John the Ripper attacks;
    report all four dimensions separately — see `pwaudit/README.md`
    "Methodology" and "The central finding" for the full pipeline and result.
+
+## How It Works
+
+![How pwaudit works](assets/brand/pwaudit-how-it-works.png)
 
 ## Repository Structure
 

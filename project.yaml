@@ -53,7 +53,7 @@ links:
   documentation: null
 
 assets:
-  hero: null
+  hero: assets/brand/pwaudit-readme-banner.png
   screenshots:
     - screenshots
 
