@@ -9,7 +9,17 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 
+- `screenshots/` and `presentation/` (original-lab artifacts, unreferenced
+  by current code) moved out of this repository into a personal
+  academic-archive repo; README updated with a `TODO` pointer until that
+  repo is published. Removed `PROJECT_NOTES.md`, folding its still-useful
+  John-build investigation directly into the README's own Limitations
+  section so the explanation isn't lost.
+
 ### Fixed
+
+- README's Repository Structure still said `hash-cracking-john-the-ripper/`
+  from before the product-name rebrand; corrected to `temper/`.
 
 ## [1.1.0] - 2026-09-08
 

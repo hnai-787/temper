@@ -100,8 +100,8 @@ password-policy folklore.)*
 ## Repository Structure
 
 ```text
-hash-cracking-john-the-ripper/
-  README.md, PROJECT_NOTES.md, CHANGELOG.md, project.yaml
+temper/
+  README.md, CHANGELOG.md, project.yaml
   pwaudit/                     NEW: the password-security laboratory
     README.md                 full design writeup, scope boundary, references
     src/pwaudit/               nist, blocklist, hibp, strength, john_parser,
@@ -112,10 +112,12 @@ hash-cracking-john-the-ripper/
                                wsl-scripts/ (exact commands used for real captures)
     results/                   real generated reports + raw John captures
     tests/                     46 tests + 1 gated real John integration test
-  presentation/Hash-Cracking.pptx   original, untouched
-  screenshots/
   .github/workflows/pwaudit-ci.yml   NEW: Ruff + pytest, no John required
 ```
+
+The original presentation and its screenshots are preserved outside this
+repository. `TODO`: link to that personal academic-archive repo once
+it's published.
 
 ## Setup Instructions
 
@@ -145,19 +147,20 @@ pwaudit analyze experiments/experiment.yaml --policy-file experiments/policy-nis
 
 ## How to Review
 
-1. Start with this README, then `presentation/Hash-Cracking.pptx` for the original.
-2. Check `screenshots/` for CUPP, John the Ripper, and Johnny in use.
-3. **New:** read `pwaudit/README.md`, then `pwaudit/src/pwaudit/nist.py` and
+1. Start with this README (the original presentation is archived outside
+   this repository — see the note in "Repository Structure" above).
+2. **New:** read `pwaudit/README.md`, then `pwaudit/src/pwaudit/nist.py` and
    `pwaudit/data/README.md` (the scope boundary and the real HIBP data
    provenance are the two things worth understanding first).
-4. Open `pwaudit/results/password-analysis.md` for the actual generated
-   report, and `pwaudit/PROJECT_NOTES.md`-referenced
-   `results/raw-captures/` for the literal real John the Ripper output
-   behind it.
+3. Open `pwaudit/results/password-analysis.md` for the actual generated
+   report, and `pwaudit/results/raw-captures/` for the literal real John
+   the Ripper output behind it.
 
 ## Screenshots
 
-See `screenshots/` — 5 screenshots (CUPP, John the Ripper, Johnny GUI, presentation cover/table of contents).
+The original lab's screenshots (CUPP, John the Ripper, Johnny GUI,
+presentation cover/table of contents) are archived outside this
+repository — see the note in "Repository Structure" above.
 
 ## Results
 
@@ -188,8 +191,12 @@ right-censored bounded brute-force attempt. See `pwaudit/README.md`
 - The HIBP snapshot is 11 rows from live single-password lookups, not the
   full corpus.
 - Empirical hash-cost comparison uses md5crypt vs. bcrypt, not raw MD5 vs.
-  bcrypt — this machine's available John build is core/non-jumbo (see
-  PROJECT_NOTES.md for the investigation).
+  bcrypt: this machine's WSL2 John 1.9.0 is Ubuntu's core (non-jumbo)
+  package (confirmed via `john --list=formats`, which lists no Raw-MD5
+  format), and building jumbo from source needs `sudo`, which this
+  environment can't supply non-interactively. Rather than fabricate a
+  Raw-MD5 result, the comparison uses md5crypt vs. bcrypt instead — both
+  real, salted, legacy-vs-modern algorithms.
 
 ## Future Enhancements
 

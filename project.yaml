@@ -47,14 +47,13 @@ dates:
   completed: null
 
 links:
-  github: https://github.com/Hussain-Ali-787/temper
+  github: https://github.com/hnai-787/temper
   demo: null
   documentation: null
 
 assets:
   hero: assets/brand/temper-readme-banner.png
-  screenshots:
-    - screenshots
+  screenshots: []
 
 achievements: []
 
